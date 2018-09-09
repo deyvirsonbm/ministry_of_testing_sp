@@ -1,4 +1,4 @@
-# api-test-ruby
+# api-test-httparty
 
 A simple project using HTTParty for API Testing
 
