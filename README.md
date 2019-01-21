@@ -1,21 +1,21 @@
-# api-test-httparty
+# Ministry of Testing
 
 A simple project using HTTParty for API Testing
 
-API Example on test - https://jsonplaceholder.typicode.com/
+API Example on test - https://github.com/fredmoreira/phone-book
 
 #### Dependencies
 
 * HTTParty
 * Rspec
-* Ruby
+* Json
 * Bundle
 
 #### Setup
-* git clone https://github.com/deyvisonbm/api_with_httparty.git
+* git clone https://github.com/deyvirsonbm/ministry_of_testing_sp
 * bundle install
 
 #### Run
 
-* rspec test-httparty.rb
-* rspec test-httparty.rb --format=documentation --> for more details.
+<!-- * rspec test-httparty.rb -->
+<!-- * rspec test-httparty.rb --format=documentation for more details. -->
