@@ -10,7 +10,6 @@ RSpec.describe 'Usando Verbo DELETE ' do
     it 'Deletar um contato com sucesso', :delete1 => true  do
         begin
             response = TestAPI.delete('/contacts/56d5efa8c82593800291c02b'); 
-            puts response.message
             expect(response.code).to eql(204)
         end
     end

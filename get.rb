@@ -30,8 +30,8 @@ RSpec.describe 'Usando Verbo GET ' do
     it 'Listar um contato inexistente', :get3 => true  do
         begin
             response = TestAPI.get('/contacts?name=wanderley');
-            puts expect(response.code).to eql(404)
-            puts expect(response.message).to eql("Not Found")
+            expect(response.code).to eql(404)
+            expect(response.message).to eql("Not Found")
         end
     end
 end

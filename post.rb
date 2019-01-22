@@ -36,7 +36,6 @@ RSpec.describe 'Using POST - ' do
 
 	    begin
 	        response = TestAPI.post('/contacts', :body => params, :header => header );
-	        puts response.code
 	        expect(response.code).to eql(400)
 	    end
 	  end

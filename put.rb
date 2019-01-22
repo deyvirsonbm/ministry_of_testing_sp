@@ -37,7 +37,6 @@ RSpec.describe 'Using PUT - ' do
 
     begin
         response = TestAPI.put('/contacts/5c3f60ba2b60334a76566efc', :body => params, :header => header );
-        puts response.code
         expect(response.code).to eql(204)
     end
   end
