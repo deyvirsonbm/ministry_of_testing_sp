@@ -17,5 +17,5 @@ API Example on test - https://github.com/fredmoreira/phone-book
 
 #### Run
 
-<!-- * rspec test-httparty.rb -->
-<!-- * rspec test-httparty.rb --format=documentation for more details. -->
+* rspec nome_do_verbo.rb
+* rspec nome_do_verbo.rb --format html --out mot_results.html
