@@ -1,4 +1,7 @@
-require "httparty"
+require 'httparty'
+require 'json-schema'
+require_relative 'schema'
+require 'pry'
 
 class TestAPI
   include HTTParty
@@ -9,8 +12,11 @@ RSpec.describe 'Usando Verbo GET ' do
 
     it 'Listar todos os contatos da agenda', :get1 => true  do
         begin
+            character = Contact.new
+            schema = character.getSchema
             response = TestAPI.get('/contacts'); 
             expect(response.code).to eql(200)
+            JSON::Validator.validate!(schema,response.body)
         end
     end
         
