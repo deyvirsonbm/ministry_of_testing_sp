@@ -9,8 +9,8 @@ RSpec.describe 'Using POST - ' do
 
   it 'Criando um novo contato', :post1 => true  do
     params = {
-        'name'          => 'Xuxa',
-        'mobilephone'   => '6666666666',
+        'name'          => 'Katia',
+        'mobilephone'   => '12333333333',
         'homephone'     => '123455'
     }
 
@@ -24,7 +24,7 @@ RSpec.describe 'Using POST - ' do
     end
   end
 
-	  it 'Criando um contato inválido'  do
+	  it 'Criando um contato inválido' , :post2 => true do
 	    params = {
 	        'mobilephone'   => '666666666',
 	        'homephone'     => '123455'
@@ -36,7 +36,7 @@ RSpec.describe 'Using POST - ' do
 
 	    begin
 	        response = TestAPI.post('/contacts', :body => params, :header => header );
-	        expect(response.code).to eql(400)
+	        expect(response.code).to eql( )
 	    end
 	  end
 end

@@ -31,4 +31,5 @@ class Contact
             ]
           }
     end
+
   end

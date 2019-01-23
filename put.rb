@@ -19,14 +19,14 @@ RSpec.describe 'Using PUT - ' do
     }
 
     begin
-        response = TestAPI.put('/contacts/56d5efa8c82593800291c02b', :body => params, :header => header );
+        response = TestAPI.put('/contacts/5c478e21ec699755522ac341', :body => params, :header => header );
         expect(response.code).to eql(204)
     end
   end
 
   it 'Editando um contato inexistente', :put2 => true do
     params = {
-    	'name'          => 'Maria'
+    	'name'          => 'Maria',
       'mobilephone'   => '33333333333',
       'homephone'     => '123455'
     }
