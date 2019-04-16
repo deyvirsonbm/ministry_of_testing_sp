@@ -18,4 +18,4 @@ API Example on test - https://github.com/fredmoreira/phone-book
 #### Run
 
 * rspec nome_do_verbo.rb
-* rspec nome_do_verbo.rb --format html --out mot_results.html
+* rspec nome_do_verbo.rb -f RspecHtmlFormatter spec

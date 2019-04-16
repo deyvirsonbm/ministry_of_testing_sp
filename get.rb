@@ -19,19 +19,12 @@ RSpec.describe 'Usando Verbo GET ' do
             JSON::Validator.validate!(schema,response.body)
         end
     end
-        
-    it 'Listar um contato específico', :get2 => true do 
-        begin 
-            response = TestAPI.get('/contacts?mobilephone=0552188889999');
-            expect(response.code).to eql(200)
-        end
-    end
 
-    it 'Listar um contato inexistente', :get3 => true  do
+    it 'Listar um contato inexistente', :get2 => true  do
         begin
             response = TestAPI.get('/contacts?name=wanderley');
-           puts  expect(response.code).to eql(404)
-           puts  expect(response.message).to eql("Not Found")
+            expect(response.code).to eql(404)
+            expect(response.message).to eql("Not Found")
         end
     end
 end

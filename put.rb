@@ -1,4 +1,5 @@
-require "httparty"
+require 'httparty'
+require 'faker'
 
 class TestAPI
   include HTTParty
@@ -9,9 +10,9 @@ RSpec.describe 'Using PUT - ' do
 
   it 'Editando um contato', :put1 => true  do
     params = {
-        'name'          => 'Joao',
-        'mobilephone'   => '9999999999',
-        'homephone'     => '55555555'
+        'name'          => Faker::Name.name,
+        'mobilephone'   => Faker::PhoneNumber.cell_phone,
+        'homephone'     => Faker::PhoneNumber.phone_number
     }
 
     header = {
@@ -19,16 +20,16 @@ RSpec.describe 'Using PUT - ' do
     }
 
     begin
-        response = TestAPI.put('/contacts/5c478e21ec699755522ac341', :body => params, :header => header );
+        response = TestAPI.put('/contacts/56d5efa8c82593800291c02b', :body => params, :header => header );
         expect(response.code).to eql(204)
     end
   end
 
   it 'Editando um contato inexistente', :put2 => true do
     params = {
-    	'name'          => 'Maria',
-      'mobilephone'   => '33333333333',
-      'homephone'     => '123455'
+    	'name'          => Faker::Name.name,
+      'mobilephone'   => Faker::PhoneNumber.cell_phone,
+      'homephone'     => Faker::PhoneNumber.phone_number
     }
 
     header = {
@@ -37,7 +38,7 @@ RSpec.describe 'Using PUT - ' do
 
     begin
         response = TestAPI.put('/contacts/5c3f60ba2b60334a76566efc', :body => params, :header => header );
-        expect(response.code).to eql(204)
+        expect(response.code).to eql(404)
     end
   end
 end
