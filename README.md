@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/e2124703239c2bbcfaa5/maintainability)](https://codeclimate.com/github/deyvirsonbm/ministry_of_testing_sp/maintainability)
+
 # Ministry of Testing
 
 A simple project using HTTParty for API Testing
