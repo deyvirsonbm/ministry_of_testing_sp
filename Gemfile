@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 gem 'httparty'
 gem 'rspec'
-gem 'json-schema'
+gem 'json-schema', '>= 2.8.1'
 gem 'pry'
 gem 'rspec_html_formatter','~> 0.3.1'
 gem 'faker'
