@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'httparty'
+gem 'httparty', '>= 0.21.0'
 gem 'rspec'
 gem 'json-schema'
 gem 'pry'
